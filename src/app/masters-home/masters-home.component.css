@@ -1,0 +1,11 @@
+/* Author - Padmesh Donthu */
+.matcard {
+  width: 35vw;
+  height: 40vh;
+}
+.example-card {
+  cursor: pointer;
+}
+.example-card:focus {
+  outline: none;
+}

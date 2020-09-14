@@ -1,0 +1,69 @@
+/*Author - Padmesh Donthu*/
+.example-card {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.auto-complete {
+  padding-top: 20px;
+}
+.example-form {
+  min-width: 150px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 70%;
+  margin: 2em;
+}
+
+.header {
+  text-align: center;
+}
+.card {
+  margin: 3%;
+  height: 60%;
+}
+
+.card-container-right {
+  display: inline;
+}
+
+.card-container-left {
+  display: inline;
+}
+
+.mat-menu-panel.notifications-dropdown {
+  max-width: none;
+  width: 30%;
+  overflow: visible;
+}
+
+.loading-indicator {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading-indicator:before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}

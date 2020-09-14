@@ -1,0 +1,65 @@
+<!--Author- Neelesh Singh -->
+<div style="overflow: auto; height: 100%; background-color: #e7ebee;">
+  <app-header></app-header>
+  <div class="grePredictor">
+    <h2>GRE School Predictor</h2>
+    <h5 *ngIf="totalScore != -1">
+      Based on your Mock Test score, that is <b>{{ totalScore }}</b
+      >, we have predicted the following universities along with their chances
+      of admission. The chances are divided into 3 categories dream, safe and
+      reach, so based on your score, following is the list of universities along
+      with thier chances of admit.
+    </h5>
+
+    <h5 *ngIf="totalScore == -1">
+      You have not taken any mock tests yet. Please take a mock test to view
+      your college list.
+    </h5>
+
+    <mat-form-field appearance="outline" *ngIf="totalScore != -1">
+      <mat-label>Search your schools...</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Example: Canad"
+      />
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+    <div
+      class="grePredictorTable mat-elevation-z12"
+      [hidden]="dataSource?.filteredData?.length === 0"
+    >
+      <table mat-table matSort [dataSource]="dataSource">
+        <ng-container matColumnDef="school">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>School</th>
+          <td mat-cell *matCellDef="let element">{{ element.school }}</td>
+        </ng-container>
+        <ng-container matColumnDef="possibility">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Possibility</th>
+          <td mat-cell *matCellDef="let element">{{ element.possibility }}</td>
+        </ng-container>
+        <tr
+          mat-header-row
+          *matHeaderRowDef="displayedColumns; sticky: true"
+        ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+      <mat-paginator
+        [pageSizeOptions]="[5, 10, 20, 50, 100]"
+        showFirstLastButtons
+        class="mat-paginator-sticky"
+      ></mat-paginator>
+    </div>
+    <div
+      *ngIf="dataSource?.filteredData?.length === 0"
+      fxLayoutAlign="center center"
+    >
+      <img
+        src="../../assets/img/noresultsfound.PNG"
+        width="180vw"
+        height="180vh"
+        style="margin-top: 8vw;"
+      />
+    </div>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+<!--Author - Padmesh Donthu-->
+<div style="overflow: auto; height: 100%; background-color: #e7ebee;">
+  <app-header></app-header>
+  <div
+    class="container"
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutWrap
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="5px"
+    fxLayoutAlign="start"
+    style="
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+    "
+  >
+    <div class="item item-1" fxFlex="50%">
+      <mat-card
+        class="example-card"
+        [routerLink]="['verbal']"
+        routerLinkActive="active"
+      >
+        <mat-card-header>
+          <mat-card-title>Verbal</mat-card-title>
+          <mat-card-subtitle>GRE</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="assets/img/gre_verbal_prep.png"
+          alt="Photo of a Gre Verbal"
+          height="30%"
+        />
+        <mat-card-content>
+          <p>
+            GRE Verbal Practice is used to test your ability to solve problems
+            related to Verbal section of GRE. You can select the type of verbal
+            problems to solve and also select the number of questions to
+            practice.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div class="item item-1" fxFlex="50%">
+      <mat-card
+        class="example-card"
+        [routerLink]="['quant']"
+        routerLinkActive="active"
+      >
+        <mat-card-header>
+          <mat-card-title>Quantitative</mat-card-title>
+          <mat-card-subtitle>GRE</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="assets/img/gre_quant_prep.png"
+          alt="Photo of a GRE Quant"
+          height="30%"
+        />
+        <mat-card-content>
+          <p>
+            GRE Quantitative Practice is used to test your ability to solve
+            problems related to Quantitative section of GRE. You can select the
+            type of quantitative problems to solve and also select the number of
+            questions to practice.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div
+    class="container"
+    fxLayout="row"
+    fxLayout.xs="column"
+    fxLayoutWrap
+    fxLayoutGap="10px"
+    fxLayoutGap.xs="5px"
+    fxLayoutAlign="start"
+    style="
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+    "
+  >
+    <div class="item item-1" fxFlex="50%">
+      <mat-card
+        class="example-card"
+        [routerLink]="['quiz']"
+        routerLinkActive="active"
+      >
+        <mat-card-header>
+          <mat-card-title>Quiz</mat-card-title>
+          <mat-card-subtitle>GRE</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="assets/img/gre-quiz.png"
+          alt="Photo of a GRE Quiz"
+          height="200px"
+        />
+        <mat-card-content>
+          <p>
+            GRE Quiz is used to test your ability to solve problems related to
+            both Quantitative and Verbal section of GRE. You can select the
+            number of questions to practice before taking the Quiz.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+
+    <div class="item item-1" fxFlex="50%">
+      <mat-card
+        class="example-card"
+        [routerLink]="['mocktest']"
+        routerLinkActive="active"
+      >
+        <mat-card-header>
+          <mat-card-title>Mock Test</mat-card-title>
+          <mat-card-subtitle>GRE</mat-card-subtitle>
+        </mat-card-header>
+        <img
+          mat-card-image
+          src="assets/img/gremock.jpg"
+          alt="Photo of a GRE mock"
+          height="200px"
+        />
+        <mat-card-content>
+          <p>
+            GRE Mock Test is used to test your ability to solve problems related
+            to actual GRE Test. The GRE Mock Test is a timed test and the level
+            of difficulty ranges from medium to difficulty.
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

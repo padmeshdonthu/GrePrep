@@ -1,0 +1,29 @@
+/* Author - Padmesh Donthu*/
+.navigation-items {
+  font-size: 14px;
+}
+.toolbar {
+  z-index: 10;
+  background-color: #1967b3;
+}
+.example-full-width {
+  width: 100%;
+  color: black;
+}
+:host ::ng-deep .mat-form-field-outline {
+  background-color: white;
+  outline-style: none;
+}
+:host .mat-button {
+  background-color: green;
+}
+:host
+  .mat-form-field-appearance-outline:not(.mat-form-field-disabled)
+  .mat-form-field-flex:hover
+  .mat-form-field-outline {
+  border: none;
+  opacity: 1;
+}
+.link {
+  color: mediumblue;
+}

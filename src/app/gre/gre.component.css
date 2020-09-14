@@ -1,0 +1,7 @@
+/* Author - Padmesh */
+.example-card {
+  cursor: pointer;
+}
+.example-card:focus {
+  outline: none;
+}
